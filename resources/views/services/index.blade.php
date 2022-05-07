@@ -18,7 +18,7 @@
 				class="row row-cols-2 row-cols-md-3 row-cols-lg-4 justify-content-center justify-content-md-start g-0 mb-4">
 				<div>
 					<a href="service-page-1.html" class="serv">
-						<img src="img/Стрижка.jpg" alt="">
+						<img src="{{asset('img/services-index/1.jpg')}}" alt="">
 						<div>Стрижка</div>
 					</a>
 				</div>

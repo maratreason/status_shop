@@ -16,7 +16,7 @@
 			<div class="row row-cols-2 row-cols-lg-3 g-2 g-sm-4">
 				<div>
 					<a href="offer-page.html" class="offer type-1">
-						<img src="img/serv2.jpg" alt="">
+						<img src="{{asset('img/serv2.jpg')}}" alt="">
 						<div class="text">
 							<div class="title mb-2">
 								<span class="f_12">30%</span> скидка

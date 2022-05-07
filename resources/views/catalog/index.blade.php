@@ -186,256 +186,43 @@
 				</div>
 				<div class="col-md-8 col-lg-9">
 					<div class="row g-3 g-sm-4 g-xxl-5 row-cols-2 row-cols-lg-3 row-cols-xxl-4">
-						<div>
-							<div class="product">
-								<a href="product-1.html"><img
-										src="img/product/Шампунь восстанавливающий Nutri-Repair (vegan), 300 мл.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Шампунь восстанавливающий Nutri-Repair
-									(vegan), 300 мл</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">846 ₽</div>
-								</div>
-								<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
-								<div class="right-marks">
-									<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
-									<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-2.html"><img
-										src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных
-									волос Color Care (vegan), 300 мл.jpg</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">846 ₽</div>
-								</div>
-								<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
-								<div class="right-marks">
-									<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
-									<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-3.html"><img
-										src="img/product/Шампунь для придания объема Linecure Volume Up Shampoo, 300 мл.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Шампунь для придания объема Linecure
-									Volume Up Shampoo, 300 мл</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">780 ₽</div>
-								</div>
-								<div class="right-marks">
-									<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
-									<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-4.html"><img
-										src="img/product/Маска для восстановления волос Linecure Hair Mask, 250 мл.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Маска для восстановления волос Linecure
-									Hair Mask, 250 мл</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">1065 ₽</div>
-								</div>
-								<div class="right-marks">
-									<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
-									<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-5.html"><img
-										src="img/product/Ампулы против выпадения волос Linecure Densidyl Prevent+.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Ампулы против выпадения волос Linecure
-									Densidyl Prevent+</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">3945 ₽</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-6.html"><img
-										src="img/product/Двухфазный кондиционер BI-PHASE CONDITIONER, 500 мл.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Двухфазный кондиционер BI-PHASE
-									CONDITIONER, 500 мл</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="add-to-cart">
-										<div class="count-enter">
-											<button type="button"
-												onclick="remove(this)">-</button>
-											<div class="fw_5 f_08">
-												<span class="">1</span><span> шт</span>
-											</div>
-											<button type="button">+</button>
-										</div>
-										<button type="button" class="btn_main px-3 px-sm-4 py-2"
-											onclick="addToCart(this)"><span class="f_08">В
-												корзину</span></button>
-									</div>
-									<div class="f_13 fw_5 black">1245 ₽</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-7.html"><img
-										src="img/product/Масло для волос Mineral Oil.jpg" alt=""
-										class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Масло для волос Mineral Oil</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">1555 ₽</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-8.html"><img
-										src="img/product/Кератиновый шампунь Pro Keratin Repair, 300 мл.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Кератиновый шампунь Pro Keratin Repair,
-									300 мл</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">1360 ₽</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product">
-								<a href="product-9.html"><img
-										src="img/product/Экологический лак для укладки волос сильной фиксации Ecological Hair Spray.jpg"
-										alt="" class="photo mb-2 mb-sm-4"></a>
-								<div class="text mb-2 mb-sm-4">Экологический лак для укладки волос
-									сильной фиксации Ecological Hair Spray</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<!-- <div class="add-to-cart">
-											<div class="count-enter">
-												<button type="button" onclick="remove(this)">-</button>
-												<div class="fw_5 f_08">
-													<span class="">1</span><span> шт</span>
-												</div>
-												<button type="button">+</button>
-											</div>
-											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
-										</div> -->
-									<button type="button" data-bs-toggle="modal"
-										data-bs-target="#callback"
-										class="btn_main btn_2 px-3 px-sm-4 py-2"><span
-											class="f_08">Заказать</span></button>
-									<div class="f_13 fw_5 black">1030 ₽</div>
-								</div>
-							</div>
-						</div>
+						@foreach ($products as $product)
+                            <div>
+                                <div class="product">
+                                    <a href="{{route('product', [$product->category->alias, $product->alias])}}"><img
+                                            src="img/{{$product->img}}"
+                                            alt="" class="photo mb-2 mb-sm-4"></a>
+                                    <div class="text mb-2 mb-sm-4">{{$product->title}}, {{$product->volume}} мл</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="add-to-cart">
+                                            <form action="{{route('basket-add', $product)}}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn_main px-3 px-sm-4 py-2"><span class="f_08">В корзину</span></button>
+                                            </form>
+                                            {{-- <div class="count-enter">
+                                                <button type="button" onclick="decrementProduct(this)">-</button>
+                                                <div class="fw_5 f_08">
+                                                    <span class="">1</span><span> шт</span>
+                                                </div>
+                                                <button type="button" onclick="incrementProduct()">+</button>
+                                            </div>
+                                            <button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button> --}}
+                                        </div>
+                                        {{-- <button type="button" data-bs-toggle="modal"
+                                            data-bs-target="#callback"
+                                            class="btn_main btn_2 px-3 px-sm-4 py-2"><span
+                                                class="f_08" data-product="{{$product->id}}">Заказать</span></button> --}}
+                                        <div class="f_13 fw_5 black">{{$product->price}} ₽</div>
+                                    </div>
+                                    <!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+                                    <div class="right-marks">
+                                        <img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+                                        <!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
 					</div>
 					<button type="button" class="accent f_09 fw_5 bb_1 mx-auto mt-5">Показать еще</button>
 					<div class="row row-cols-lg-2 mt-4">

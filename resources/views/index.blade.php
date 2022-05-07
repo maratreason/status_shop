@@ -13,7 +13,7 @@
 			</div>
 		</div>
 	</section> --}}
-	
+
 	<section id="sec-3" class="mb_4">
 		<div class="container position-relative py-4 py-md-5 h-100">
 			<div class="row h-100">
@@ -46,7 +46,7 @@
 		</div>
 	</section>
 
-	
+
 
 	<section id="sec-4" class="mb_4">
 		<div class="container">
@@ -230,9 +230,11 @@
 							<nav class="product-menu">
 								<div class="swiper-wrapper">
 									@foreach ($categories as $category)
-										<div class="swiper-slide">
-											<button type="button" class="@if($category->id == 1)active @endif">{{$category->title}}</button>
-										</div>
+                                    @if ($category->parent_id == 0)
+                                        <div class="swiper-slide">
+                                            <a href="{{ route('home', $category->alias) }}" class="@if($category->alias == session()->get('category_alias'))active @endif">{{$category->title}}</a>
+                                        </div>
+                                    @endif
 									@endforeach
 								</div>
 							</nav>
@@ -277,7 +279,7 @@
 				</div>
 			</div>
 		</div>
-		<a href="catalog.html" class="btn_main btn_1 mx-auto"><span class="f_09">Перейти в каталог</span></a>
+		<a href="{{route('catalog')}}" class="btn_main btn_1 mx-auto"><span class="f_09">Перейти в каталог</span></a>
 	</section>
 
 	<section id="sec-7">

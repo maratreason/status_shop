@@ -33,6 +33,7 @@ header .logo {
 }
 .main-menu a:hover, .main-menu a:focus {color: var(--accent);}
 .main-menu a:active {color: var(--accent-light);}
+.main-menu li.active a {color: var(--accent-light);}
 @media (max-width: 767px) {
     header {
         height: 65px;
@@ -365,9 +366,9 @@ header .logo {
 }
 
 /*sprite with stars*/
-#rating input:checked ~ label, 
-#rating label, 
-#rating label:hover, 
+#rating input:checked ~ label,
+#rating label,
+#rating label:hover,
 #rating label:hover ~ label {
     background: url('../img/icons/stars_sprite.png') no-repeat;
     background-size: 100% auto;
@@ -897,11 +898,11 @@ nav.left-menu>ul>li>ul>li>ul>li>a {
     font-size: .9em;
     text-transform: initial;
 }
-nav.left-menu>ul>li>button.active, 
-nav.left-menu>ul>li>ul>li>button.active, 
+nav.left-menu>ul>li>button.active,
+nav.left-menu>ul>li>ul>li>button.active,
 nav.left-menu>ul>li>ul>li>ul>li>button.active,
-nav.left-menu>ul>li>a.active, 
-nav.left-menu>ul>li>ul>li>a.active, 
+nav.left-menu>ul>li>a.active,
+nav.left-menu>ul>li>ul>li>a.active,
 nav.left-menu>ul>li>ul>li>ul>li>a.active {
     color: var(--accent);
 }
@@ -925,7 +926,7 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
         background-color: #F2F2F2;
         padding: .5em 0px;
     }
-    
+
 }
 
 .expandable-list {

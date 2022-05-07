@@ -27,14 +27,30 @@ function toggleList(btn) {
 }
 
 /* add to cart */
-function addToCart(btn) {
-  let elem = btn.previousElementSibling;
-  if (elem.classList.contains('visbl')) {
-    elem.classList.remove('visbl');
-  } else {
-    elem.classList.add('visbl');
-  }
+function decrementProduct(btn) {
+    let count = +document.querySelector('.fw_5.f_08 span').textContent;
+    if (count > 1) {
+        count--;
+        document.querySelector('.fw_5.f_08 span').textContent = count;
+    } else {
+        remove(btn);
+    }
 }
+
+function incrementProduct() {
+    let count = +document.querySelector('.fw_5.f_08 span').textContent;
+    count++;
+    document.querySelector('.fw_5.f_08 span').textContent = count;
+}
+
+function addToCart(btn) {
+    let elem = btn.previousElementSibling;
+    if (elem.classList.contains('visbl')) {
+      elem.classList.remove('visbl');
+    } else {
+      elem.classList.add('visbl');
+    }
+  }
 
 function remove(btn) {
   let elem = btn.closest('.count-enter');
