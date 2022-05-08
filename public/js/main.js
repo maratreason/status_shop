@@ -257,7 +257,8 @@ window.addEventListener("load", function () {
     const XHR = new XMLHttpRequest();
     const FD = new FormData(form);
     XHR.addEventListener("load", function (event) {
-      modalSuccess.show();
+        modalSuccess.show();
+        console.log(event.target)
       modalCallback.hide();
       document.getElementById("form_recording").reset();
     });

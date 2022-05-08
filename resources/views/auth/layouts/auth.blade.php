@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Панель администратора</title>
+    <title>Панель администратора | @yield('title')</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -35,12 +35,17 @@
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="margin-left: 0;">
             <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="{{route('index')}}" title="Перейти на сайт"><img src="{{asset('img/logo-dark.svg')}}" alt="Студия красоты" class="logo" style="width: 100px;"></a>
+                </li>
+            </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Войти</a>
+                    <a href="{{route('login')}}" class="nav-link" title="Войти">Войти</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Регистрация</a>
+                    <a href="{{route('register')}}" class="nav-link" title="Регистрация">Регистрация</a>
                 </li>
             </ul>
         </nav>

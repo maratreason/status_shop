@@ -8,6 +8,7 @@ header .logo {
     object-fit: contain;
     object-position: left center;
 }
+
 .burger i.fas {
     font-size: 2em;
     color: #fff;

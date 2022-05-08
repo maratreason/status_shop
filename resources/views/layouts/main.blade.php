@@ -49,7 +49,7 @@
 					</button>
 				</div>
 				<div class="col-4 col-sm-3 col-md-2">
-					<a href="{{route('home')}}"><img src="{{asset('img/logo-white.svg')}}" alt="Студия красоты" class="logo"></a>
+					<a href="{{route('orders.home')}}"><img src="{{asset('img/logo-white.svg')}}" alt="Студия красоты" class="logo"></a>
 				</div>
 				<div class="d-none d-sm-block col-4 col-md-6 col-lg-8">
 					<div class="text-end fw_3 mb-lg-2"><a href="tel:89510668777">8 951 066 8 777</a></div>
@@ -65,16 +65,16 @@
 					</nav>
 				</div>
 				<div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
-					<button type="button" class="btn-icon">
+					<a type="button" class="btn-icon" href={{route('login')}} title="Перейти в панель администратора">
 						<svg width="40" height="38" viewBox="0 0 40 38" xmlns="http://www.w3.org/2000/svg">
 							<path d="M19.9998 9.35485C21.8332 9.35485 23.3332 10.7581 23.3332 12.4731C23.3332 14.1882 21.8332 15.5914 19.9998 15.5914C18.1665 15.5914 16.6665 14.1882 16.6665 12.4731C16.6665 10.7581 18.1665 9.35485 19.9998 9.35485ZM19.9998 23.3871C24.4998 23.3871 29.6665 25.3984 29.9998 26.5054V28.0645H9.99984V26.521C10.3332 25.3984 15.4998 23.3871 19.9998 23.3871ZM19.9998 6.23657C16.3165 6.23657 13.3332 9.02743 13.3332 12.4731C13.3332 15.9188 16.3165 18.7097 19.9998 18.7097C23.6832 18.7097 26.6665 15.9188 26.6665 12.4731C26.6665 9.02743 23.6832 6.23657 19.9998 6.23657ZM19.9998 20.2688C15.5498 20.2688 6.6665 22.3581 6.6665 26.5054V31.1828H33.3332V26.5054C33.3332 22.3581 24.4498 20.2688 19.9998 20.2688Z"/>
 						</svg>
-					</button>
-					<a href={{route('basket')}} class="btn-icon ms-2 ms-md-4">
+					</a>
+					<a href="{{ route('basket') }}" class="btn-icon ms-2 ms-md-4" title="Перейти в корзину">
 						<svg width="40" height="38" viewBox="0 0 40 38" xmlns="http://www.w3.org/2000/svg">
 							<path d="M27.5771 20.2688C28.8271 20.2688 29.9271 19.6296 30.4938 18.6629L36.4605 8.54409C37.0771 7.51506 36.2771 6.23657 35.0105 6.23657H10.3438L8.77715 3.11829H3.32715V6.23657H6.66048L12.6605 18.0704L10.4105 21.8747C9.19381 23.964 10.7938 26.5054 13.3271 26.5054H33.3271V23.3871H13.3271L15.1605 20.2688H27.5771ZM11.9271 9.35484H32.1771L27.5771 17.1505H15.8771L11.9271 9.35484ZM13.3271 28.0645C11.4938 28.0645 10.0105 29.4677 10.0105 31.1828C10.0105 32.8979 11.4938 34.3011 13.3271 34.3011C15.1605 34.3011 16.6605 32.8979 16.6605 31.1828C16.6605 29.4677 15.1605 28.0645 13.3271 28.0645ZM29.9938 28.0645C28.1605 28.0645 26.6771 29.4677 26.6771 31.1828C26.6771 32.8979 28.1605 34.3011 29.9938 34.3011C31.8271 34.3011 33.3271 32.8979 33.3271 31.1828C33.3271 29.4677 31.8271 28.0645 29.9938 28.0645Z"/>
 						</svg>
-						<div class="count">{{session('ordersCount')}}</div>
+						<div class="count">@if(!empty(session('ordersCount'))){{session('ordersCount')}}@else 0 @endif</div>
 					</a>
 				</div>
 			</div>
@@ -161,7 +161,7 @@
                             <div>Мы находимся по адресу: г.Казань, улица Меридианная, 3</div>
                         </div>
                         <div class="d-flex align-items-start f_08 fw_3 mb-3">
-                            <img src="img/icons/phone.svg" alt="номер телефона" class="me-2">
+                            <img src="{{asset('img/icons/phone.svg')}}" alt="номер телефона" class="me-2">
                             <a href="tel:8 951 066 8 777">8 951 066 8 777</a>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                         <a class="developers" href="http://asmpromo.ru/" alt="Создание и продвижение сайтов"
                             title="Создание и продвижение сайтов" target="_blanc">
                             <div class="f_08">Создание и продвижение сайтов</div>
-                            <img src="img/asm_white.png" alt="">
+                            <img src="{{asset('img/asm_white.png')}}" alt="">
                         </a>
                     </div>
                 </div>
@@ -718,7 +718,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="box">
-                    <form id="form_recording" action="">
+                    <form id="form_recording" action="{{route('basket-confirm')}}" method="POST">
+                        @csrf
                         <h4>Онлайн запись</h4>
                         <input type="text" name="name" placeholder="Имя" class="white w-100 mb-3" required>
                         <input id="tel" name="phone" placeholder="Номер телефона" class="white w-100 mb-3"

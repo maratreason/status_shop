@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BasketController extends Controller
 {
@@ -11,52 +12,60 @@ class BasketController extends Controller
     {
         $orderId = session('orderId');
         if (!is_null($orderId)) {
-            $order = Order::findOrFail($orderId);
+            $order = Order::find($orderId);
             session(['ordersCount' => $order->getCountOrders()]);
         }
+
+        $order = Order::find($orderId);
 
         return view('basket.index', compact('order'));
     }
 
-    public function basketOrder()
-    {
-        return view('basket-order');
-    }
-
-    public function basketAdd($productId)
+    /**
+     * Add to cart
+     *
+     * @param $id
+     * @return void
+     */
+    public function basketAdd($id)
     {
         $orderId = session('orderId');
         if (is_null($orderId)) {
-            $order = Order::create()->id;
+            $order = Order::create();
             session(['orderId' => $order->id]);
         } else {
-            $order = Order::findOrFail($orderId);
+            $order = Order::find($orderId);
         }
 
-        if ($order->products->contains($productId)) {
-            $pivotRow = $order->products()->where('product_id', $productId)->first()->pivot;
+        if ($order->products->contains($id)) {
+            $pivotRow = $order->products()->where('product_id', $id)->first()->pivot;
             $pivotRow->count++;
             $pivotRow->update();
         } else {
-            $order->products()->attach($productId);
+            $order->products()->attach($id);
+        }
+
+        if (Auth::check()) {
+            $order->user_id = Auth::id();
+            $order->save();
         }
 
         return redirect()->route('basket');
     }
 
-    public function basketRemove($productId)
+    public function basketRemove($id)
     {
         $orderId = session('orderId');
         if (is_null($orderId)) {
-            return redirect()->route('basket');
+            return view('basket', compact('order'));
         }
 
-        $order = Order::findOrFail($orderId);
-        if ($order->products->contains($productId)) {
-            $pivotRow = $order->products()->where('product_id', $productId)->first()->pivot;
+        $order = Order::find($orderId);
 
+        if ($order->products->contains($id)) {
+            $pivotRow = $order->products()->where('product_id', $id)->first()->pivot;
             if ($pivotRow->count < 2) {
-                $order->products()->detach($productId);
+                $order->products()->detach($id);
             } else {
                 $pivotRow->count--;
                 $pivotRow->update();
@@ -64,5 +73,36 @@ class BasketController extends Controller
         }
 
         return redirect()->route('basket');
+    }
+
+    public function basketOrder()
+    {
+        $orderId = session('orderId');
+
+        if (is_null($orderId)) {
+            return redirect()->route('index');
+        }
+
+        $order = Order::findOrFail($orderId);
+
+        return view('basket-order', compact('order'));
+    }
+
+    public function basketConfirm(Request $request)
+    {
+        $orderId = session('orderId');
+        dd($request->name);
+
+        if (is_null($orderId)) {
+            return redirect()->route('main');
+        }
+
+        $order = Order::findOrFail($orderId);
+        $order->name = $request->name;
+        $order->phone = $request->phone;
+        $order->comment = $request->comment;
+        $order->status = 1;
+        $order->save();
+        session()->forget('orderId');
     }
 }

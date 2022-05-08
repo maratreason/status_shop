@@ -1,5 +1,7 @@
 @extends('auth.layouts.auth')
 
+@section('title', 'Авторизация')
+
 @section('content')
     <div class="content-wrapper" style="margin-left: 0;">
 
@@ -11,17 +13,18 @@
                             <div class="card-header">
                                 <h3 class="card-title">Войти</h3>
                             </div>
-                            <form>
+                            <form action="{{route('login')}}" method="POST">
+                                @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Введите email">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Введите email" name="email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Пароль</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="Введите пароль">
+                                        <label for="password">Пароль</label>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Введите пароль" name="password">
                                     </div>
                                 </div>
 

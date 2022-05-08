@@ -232,7 +232,7 @@
 									@foreach ($categories as $category)
                                     @if ($category->parent_id == 0)
                                         <div class="swiper-slide">
-                                            <a href="{{ route('home', $category->alias) }}" class="@if($category->alias == session()->get('category_alias'))active @endif">{{$category->title}}</a>
+                                            <a href="{{ route('category-home', $category->alias) }}" class="@if($category->alias == session()->get('category_alias'))active @endif">{{$category->title}}</a>
                                         </div>
                                     @endif
 									@endforeach

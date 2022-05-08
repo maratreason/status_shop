@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Chekc user.
+     *
+     * @return boolean
+     */
+    public function isAdmin()
+    {
+        return $this->is_admin === 1;
+    }
 }
