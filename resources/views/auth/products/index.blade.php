@@ -8,7 +8,7 @@
             <div class="col-12 d-flex justify-center">
                 <h1>Продукты</h1>
                 <div class="ml-auto mt-3">
-                    <a href="{{route('categories.create')}}" class="btn btn-success"><i class="fa-solid fa-pen-to-square" style="margin-right: 5px"></i> Добавить продукт</a>
+                    <a href="{{route('products.create')}}" class="btn btn-success"><i class="fa-solid fa-pen-to-square" style="margin-right: 5px"></i> Добавить продукт</a>
                 </div>
             </div>
         </div>
@@ -31,11 +31,17 @@
                                 @foreach ($products as $product)
                                     <tr>
                                         <td>{{$product->id}}</td>
-                                        <td><a href=""><img src="{{asset('img/'.$product->img)}}" style="width: 30px;" alt=""></a></td>
+                                        <td><a href=""><img src="{{Storage::url($product->img)}}" style="width: auto; max-height: 30px; border-radius: 50%;" alt=""></a></td>
                                         <td style="white-space: normal;">{{$product->title}}</td>
                                         <td>{{$product->alias}}</td>
                                         <td>
-                                            {{$product->category->title}}
+                                            @isset($product->category->title)
+                                            <span class="alert alert-default-success" style="padding: 5px 15px; border: none; font-size: 13px;">
+                                                {{ $product->category->title }} <i class="fa-solid fa-diagram-project" style="font-size: 10px;"></i>
+                                            </span>
+                                            @else
+                                            Без категории
+                                            @endisset
                                         </td>
                                         <td class="d-flex">
                                             <a href="{{route('products.show', $product)}}" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 5px"></i> Открыть</a>

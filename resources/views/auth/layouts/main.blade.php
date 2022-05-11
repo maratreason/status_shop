@@ -25,11 +25,6 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        <!-- Preloader -->
-        {{-- <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div> --}}
-
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -38,12 +33,12 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
                             class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
+                {{-- <li class="nav-item d-none d-sm-inline-block">
                     <a href="index3.html" class="nav-link">Категории</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Продукты</a>
-                </li>
+                </li> --}}
             </ul>
 
             <!-- Right navbar links -->
@@ -107,105 +102,44 @@
                         data-accordion="false">
                         <li class="nav-item">
                             <a href="{{route('categories.index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <i class="nav-icon fas fa-boxes-stacked"></i>
                                 <p>Категории</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('products.index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <i class="nav-icon fa-solid fa-wallet"></i>
                                 <p>Продукты</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/widgets.html" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Widgets
-                                    <span class="right badge badge-danger">New</span>
-                                </p>
+                            <a href="{{route('services.index')}}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-database"></i>
+                                <p>Услуги</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    Layout Options
-                                    <span class="badge badge-info right">6</span>
-                                </p>
+                            <a href="{{route('offers.index')}}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-note-sticky"></i>
+                                <p>Акции</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>Charts</p>
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fa-solid fa-people-group"></i>
+                                <p>Команда</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tree"></i>
-                                <p>UI Elements</p>
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fa-solid fa-circle-info"></i>
+                                <p>Информация о нас</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
-                                <p>Forms</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Tables
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-header">EXAMPLES</li>
-                        <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
-                                <p>
-                                    Calendar
-                                    <span class="badge badge-info right">2</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Gallery
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/kanban.html" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
-                                <p>
-                                    Kanban Board
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-envelope"></i>
-                                <p>Mailbox</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-header">MISCELLANEOUS</li>
-                        <li class="nav-item">
-                            <a href="iframe.html" class="nav-link">
-                                <i class="nav-icon fas fa-ellipsis-h"></i>
-                                <p>Tabbed IFrame Plugin</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Documentation</p>
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fa-solid fa-address-card"></i>
+                                <p>Контакты</p>
                             </a>
                         </li>
                     </ul>

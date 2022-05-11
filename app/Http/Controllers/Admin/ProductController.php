@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
+use App\Models\Category;
+use App\Models\HairType;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -26,7 +30,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $hairTypes = HairType::all();
+        $brands = Brand::all();
+        return view('auth.products.form', compact('categories', 'hairTypes', 'brands'));
     }
 
     /**
@@ -37,7 +44,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $params = $request->all();
+        unset($params['img']);
+
+        if ($request->has('img')) {
+            $params['img'] = $request->file('img')->store('products', 'public');
+        }
+
+        Product::create($params);
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -48,7 +64,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('auth.products.show', compact('product'));
     }
 
     /**
@@ -59,7 +75,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $categories = Category::all();
+        $hairTypes = HairType::all();
+        $brands = Brand::all();
+        return view('auth.products.form', compact('categories', 'hairTypes', 'brands', 'product'));
     }
 
     /**
@@ -71,7 +90,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $params = $request->all();
+        unset($params['img']);
+
+        if ($request->has('img')) {
+            Storage::delete($product->img);
+            $params['img'] = $request->file('img')->store('products', 'public');
+        }
+
+        $product->update($params);
+        return redirect()->route('products.index');
     }
 
     /**
@@ -82,6 +110,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->route('products.index');
     }
 }

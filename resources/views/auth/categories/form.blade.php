@@ -54,6 +54,7 @@
                                 placeholder="Введите алиас"
                                 value="@isset($category) {{ $category->alias }} @endisset"
                             />
+                            <span id="exampleInputEmail1-error" class="error invalid-feedback">Please enter a email address</span>
                         </div>
                         <div class="form-group">
                             <div class="form-group" data-select2-id="29">

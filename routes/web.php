@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\OfferController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\CatalogController;
@@ -31,6 +33,8 @@ Route::middleware(['auth'])->group(function() {
 
         Route::resource('categories', CategoryController::class);
         Route::resource('products', ProductController::class);
+        Route::resource('services', ServiceController::class);
+        Route::resource('offers', OfferController::class);
     });
 });
 
